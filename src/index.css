@@ -1,0 +1,118 @@
+.navbar-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.navbar-wrapper {
+  position: relative; /* le menu se positionne par rapport à ce wrapper */
+}
+
+.navbar-button {
+  font-size: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navbar-menu {
+  position: absolute;
+  top: 100%; /* juste en dessous du bouton */
+  right: 0;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-wrapper .navbar-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar-menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Conteneur plein écran */
+.accueil-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: black;
+}
+
+/* Bouton centré */
+.center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.center-button:hover {
+  background-color: #0056b3;
+}
+
+/* index.css ou Temoignage.css */
+.temoignage-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centre verticalement */
+  align-items: center;       /* centre horizontalement */
+  height: 100vh;             /* prend toute la hauteur de la fenêtre */
+  gap: 1rem;                 /* espace entre les champs */
+}
+
+.temoignage-form div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;              /* largeur fixe pour les champs */
+}
+
+.temoignage-form label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.temoignage-form input,
+.temoignage-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.temoignage-form button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.temoignage-form button:hover {
+  background-color: #0056b3;
+}
