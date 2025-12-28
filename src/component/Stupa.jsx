@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import * as THREE from 'three'
 
 export default function Stupa() {
-  const { scene } = useGLTF(`models/stupa.glb`)
+  const { scene } = useGLTF('public\models\stupa.glb')
 
   useEffect(() => {
     // Centre le modèle
@@ -21,4 +21,4 @@ export default function Stupa() {
   return <primitive object={scene} />
 }
 
-useGLTF.preload(`${import.meta.env.BASE_URL}models/stupa.glb`)
+useGLTF.preload('/stupa.glb')
