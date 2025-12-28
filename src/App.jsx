@@ -8,7 +8,7 @@ function App() {
     <HashRouter>
       <Navbar />
       <Routes>
-        <Route path="#/" element={<Accueil />} />
+        <Route path="/" element={<Accueil />} />
         <Route path="/temoignage" element={<Temoignage />} />
       </Routes>
     </HashRouter>
