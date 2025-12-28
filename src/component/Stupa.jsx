@@ -3,22 +3,21 @@ import { useEffect } from 'react'
 import * as THREE from 'three'
 
 export default function Stupa() {
-  const { scene } = useGLTF('/models/stupa.glb')
+  const modelPath = import.meta.env.BASE_URL + 'models/stupa.glb';
+  const { scene } = useGLTF(modelPath);
 
   useEffect(() => {
-    // Centre le modèle
-    const box = new THREE.Box3().setFromObject(scene)
-    const center = box.getCenter(new THREE.Vector3())
-    const size = box.getSize(new THREE.Vector3())
+    const box = new THREE.Box3().setFromObject(scene);
+    const center = box.getCenter(new THREE.Vector3());
+    const size = box.getSize(new THREE.Vector3());
 
-    scene.position.sub(center)
+    scene.position.sub(center);
 
-    // Échelle automatique
-    const maxAxis = Math.max(size.x, size.y, size.z)
-    scene.scale.setScalar(2 / maxAxis)
-  }, [scene])
+    const maxAxis = Math.max(size.x, size.y, size.z);
+    scene.scale.setScalar(2 / maxAxis);
+  }, [scene]);
 
-  return <primitive object={scene} />
+  return <primitive object={scene} />;
 }
 
-useGLTF.preload('/models/stupa.glb')
+useGLTF.preload(import.meta.env.BASE_URL + 'models/stupa.glb');
