@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:"/KH50-version2"
+  base: '/KH50-version2/'  // <== important pour GitHub Pages
 })

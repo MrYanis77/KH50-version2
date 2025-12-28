@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import * as THREE from 'three'
 
 export default function Stupa() {
-  const { scene } = useGLTF(`${import.meta.env.BASE_URL}models/stupa.glb`)
+  const { scene } = useGLTF(`models/stupa.glb`)
 
   useEffect(() => {
     // Centre le modèle
