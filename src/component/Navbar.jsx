@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -9,11 +10,12 @@ export default function Navbar() {
         <button onClick={() => setOpen(!open)} className="navbar-button">
           ☰
         </button>
+
         {open && (
           <div className="navbar-menu">
-            <a href="#">Accueil</a>
-            <a href="#">Bibliothèque de ressource</a>
-            <a href="/témoignage">Témoignage</a>
+            <Link to="/" onClick={() => setOpen(false)}>Accueil</Link>
+            <Link to="/" onClick={() => setOpen(false)}>Bibliothèque de ressource</Link>
+            <Link to="/temoignage" onClick={() => setOpen(false)}>Témoignage</Link>
           </div>
         )}
       </div>
