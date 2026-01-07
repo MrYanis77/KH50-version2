@@ -22,12 +22,6 @@ export default function Profil() {
           ← Retour au mur
         </button>
 
-        <button 
-          onClick={() => navigate(`/Modifier/${id}`)}
-          style={{ padding: '10px 20px', cursor: 'pointer', borderRadius: '5px', border: 'none', background: '#007bff', color: 'white', fontWeight: 'bold' }}
-        >
-          ✎ Éditer la fiche
-        </button>
       </div>
 
       <h1 style={{ color: '#e0e0e0', borderBottom: '1px solid #444', paddingBottom: '10px' }}>
