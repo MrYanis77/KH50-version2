@@ -82,48 +82,216 @@
   background-color: #0056b3;
 }
 
-/* index.css ou Temoignage.css */
-.temoignage-form {
+.form-page-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;   /* centre verticalement */
-  align-items: center;       /* centre horizontalement */
-  height: 100vh;             /* prend toute la hauteur de la fenêtre */
-  gap: 1rem;                 /* espace entre les champs */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Fond clair pour détacher le formulaire */
+  padding: 20px;
 }
 
-.temoignage-form div {
-  display: flex;
-  flex-direction: column;
-  width: 300px;              /* largeur fixe pour les champs */
+.double-form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 900px;
+  width: 100%;
 }
 
-.temoignage-form label {
-  margin-bottom: 0.3rem;
+.form-columns {
+  display: flex;
+  gap: 40px; /* Espace entre les deux formulaires */
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-section h3 {
+  margin-bottom: 10px;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group label {
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
-.temoignage-form input,
-.temoignage-form textarea {
-  padding: 0.5rem;
+.input-group input, 
+.input-group textarea {
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.temoignage-form button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
+.submit-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-.temoignage-form button:hover {
+.submit-btn:hover {
   background-color: #0056b3;
 }
 
+/* Responsivité pour mobile */
+@media (max-width: 768px) {
+  .form-columns {
+    flex-direction: column;
+  }
+}
+
+/* --- PAGE MODIFICATION (Version Verticale) --- */
+
+.modifier-container {
+  padding: 40px 20px;
+  background: #f4f4f4; /* Fond gris clair */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.modifier-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px; /* Largeur resserrée pour la lecture verticale */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modifier-form h2 {
+  margin: 0;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* On force chaque section à prendre toute la largeur */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.form-group input, 
+.form-group textarea {
+  padding: 12px;
+  background: white;
+  border: 1px solid #ccc;
+  color: black;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ligne pour Age et Date : on peut les garder côte à côte ou les empiler */
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.row .form-group {
+  flex: 1;
+}
+
+/* Zone Média */
+.media-upload-zone {
+  padding: 20px;
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.media-preview {
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: white;
+  border-radius: 4px;
+}
+
+/* Boutons */
+.btn-save {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.btn-save:hover {
+  background: #0056b3;
+}
+
+.btn-cancel-light {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 480px) {
+  .row {
+    flex-direction: column;
+  }
+}
 .mur-container {
   width: 100vw;
   height: 100vh;

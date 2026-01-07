@@ -5,7 +5,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="navbar-container">
+    <nav className="navbar-container">
+    
+      {/* Menu à droite */}
       <div className="navbar-wrapper">
         <button onClick={() => setOpen(!open)} className="navbar-button">
           ☰
@@ -16,10 +18,9 @@ export default function Navbar() {
             <Link to="/" onClick={() => setOpen(false)}>Accueil</Link>
             <Link to="/" onClick={() => setOpen(false)}>Bibliothèque de ressource</Link>
             <Link to="/temoignage" onClick={() => setOpen(false)}>Témoignage</Link>
-            <Link to="/" onClick={() => setOpen(false)}>Connexion</Link>
           </div>
         )}
       </div>
-    </div>
+    </nav>
   );
 }
