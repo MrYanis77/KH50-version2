@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
 .navbar-container {
   position: absolute;
   top: 20px;
@@ -115,4 +122,10 @@
 
 .temoignage-form button:hover {
   background-color: #0056b3;
+}
+
+.mur-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
 }
