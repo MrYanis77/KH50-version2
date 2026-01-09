@@ -71,17 +71,23 @@
   z-index: 10;
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  
+  /* Style gris transparent */
+  background-color: rgba(128, 128, 128, 0.5); /* Gris avec 50% d'opacité */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure légère */
   border-radius: 8px;
   cursor: pointer;
+  
+  /* Optionnel : effet de flou derrière le bouton (Glassmorphism) */
+  backdrop-filter: blur(5px); 
+  transition: all 0.3s ease;
 }
 
 .center-button:hover {
-  background-color: #0056b3;
+  background-color: rgba(128, 128, 128, 0.8); /* Plus opaque au survol */
+  transform: translate(-50%, -50%) scale(1.05); /* Effet de zoom léger */
 }
-
 .form-page-wrapper {
   display: flex;
   justify-content: center;

@@ -1,27 +1,64 @@
-import { Canvas } from '@react-three/fiber';
-import { Suspense } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Stupa from '../component/Stupa';
 
 export default function Accueil() {
+  const [hasStarted, setHasStarted] = useState(false);
+  const videoRef = useRef(null);
   const navigate = useNavigate();
+
+  const handleLoadedMetadata = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 1;
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current && videoRef.current.currentTime >= 9) {
+      videoRef.current.pause();
+      navigate('/mur');
+    }
+  };
+
+  const handleStart = () => {
+    setHasStarted(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
 
   return (
     <div className="accueil-container">
-      <Canvas camera={{ position: [0, 2, 20], fov: 45 }}>
-        <ambientLight intensity={1.2} />
-        <directionalLight position={[5, 10, 5]} intensity={1.5} />
-        <Suspense fallback={null}>
-          <Stupa />
-        </Suspense>
-      </Canvas>
-
-      <button
-        className="center-button"
-        onClick={() => navigate('/mur')}
+      <video 
+        ref={videoRef}
+        className="video-bg"
+        onLoadedMetadata={handleLoadedMetadata}
+        onTimeUpdate={handleTimeUpdate}
+        onEnded={() => navigate('/mur')}
+        playsInline
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 1
+        }}
       >
-        Accédez au mur
-      </button>
+        <source 
+          src={`${import.meta.env.BASE_URL}videos/Animation10s0001-0240.mp4`} 
+          type="video/mp4" 
+        />
+      </video>
+
+      {!hasStarted && (
+        <button 
+          className="center-button" 
+          onClick={handleStart}
+        >
+          Accéder au mur
+        </button>
+      )}
     </div>
   );
 }

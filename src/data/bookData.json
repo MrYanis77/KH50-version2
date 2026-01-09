@@ -1,26 +1,224 @@
 {
   "people": [
     {
-      "id": 24,
-      "nom_complet": "Yanis Laldji",
-      "prenom": "Yanis",
-      "nom_de_famille": "Laldji",
-      "age": 7,
-      "date_de_naissance": "2026-01-07",
-      "lieu_de_naissance": "test_ln",
-      "lieu_de_deces": "test_ld",
-      "histoire": "qdsdqsd"
+      "id": 1,
+      "nom_complet": "Sokha Chea",
+      "prenom": "Sokha",
+      "nom_de_famille": "Chea",
+      "age": 32,
+      "date_de_naissance": "1993-04-12",
+      "lieu_de_naissance": "Phnom Penh, Cambodge",
+      "lieu_de_deces": "Phnom Penh, Cambodge",
+      "histoire": "Sokha était mécanicien et très apprécié dans son quartier."
     },
     {
-      "id": 25,
-      "nom_complet": "zfe fefzef",
-      "prenom": "zfe",
-      "nom_de_famille": "fefzef",
-      "age": 4,
-      "date_de_naissance": "2025-12-31",
-      "lieu_de_naissance": "test_ln",
-      "lieu_de_deces": "dffe",
-      "histoire": "dfsdfde"
+      "id": 2,
+      "nom_complet": "Dara Sok",
+      "prenom": "Dara",
+      "nom_de_famille": "Sok",
+      "age": 45,
+      "date_de_naissance": "1980-09-03",
+      "lieu_de_naissance": "Siem Reap, Cambodge",
+      "lieu_de_deces": "Siem Reap, Cambodge",
+      "histoire": "Ancien guide touristique passionné par les temples d’Angkor."
+    },
+    {
+      "id": 3,
+      "nom_complet": "Sopheak Chhim",
+      "prenom": "Sopheak",
+      "nom_de_famille": "Chhim",
+      "age": 27,
+      "date_de_naissance": "1998-01-21",
+      "lieu_de_naissance": "Battambang, Cambodge",
+      "lieu_de_deces": "Battambang, Cambodge",
+      "histoire": "Étudiante brillante en informatique."
+    },
+    {
+      "id": 4,
+      "nom_complet": "Vannak Touch",
+      "prenom": "Vannak",
+      "nom_de_famille": "Touch",
+      "age": 71,
+      "date_de_naissance": "1954-06-10",
+      "lieu_de_naissance": "Kampong Cham, Cambodge",
+      "lieu_de_deces": "Phnom Penh, Cambodge",
+      "histoire": "Ancien enseignant respecté dans sa province."
+    },
+    {
+      "id": 5,
+      "nom_complet": "Chantha Keo",
+      "prenom": "Chantha",
+      "nom_de_famille": "Keo",
+      "age": 18,
+      "date_de_naissance": "2007-11-02",
+      "lieu_de_naissance": "Takeo, Cambodge",
+      "lieu_de_deces": "Takeo, Cambodge",
+      "histoire": "Jeune lycéenne aimant la littérature khmère."
+    },
+    {
+      "id": 6,
+      "nom_complet": "Piseth Ly",
+      "prenom": "Piseth",
+      "nom_de_famille": "Ly",
+      "age": 54,
+      "date_de_naissance": "1971-03-18",
+      "lieu_de_naissance": "Kandal, Cambodge",
+      "lieu_de_deces": "Kandal, Cambodge",
+      "histoire": "Agriculteur ayant consacré sa vie à ses rizières."
+    },
+    {
+      "id": 7,
+      "nom_complet": "Sovann Phan",
+      "prenom": "Sovann",
+      "nom_de_famille": "Phan",
+      "age": 39,
+      "date_de_naissance": "1986-07-25",
+      "lieu_de_naissance": "Prey Veng, Cambodge",
+      "lieu_de_deces": "Phnom Penh, Cambodge",
+      "histoire": "Commerçant actif dans les marchés locaux."
+    },
+    {
+      "id": 8,
+      "nom_complet": "Makara Hem",
+      "prenom": "Makara",
+      "nom_de_famille": "Hem",
+      "age": 62,
+      "date_de_naissance": "1963-12-14",
+      "lieu_de_naissance": "Pursat, Cambodge",
+      "lieu_de_deces": "Pursat, Cambodge",
+      "histoire": "Ancien pêcheur du Tonlé Sap."
+    },
+    {
+      "id": 9,
+      "nom_complet": "Rithy Chhay",
+      "prenom": "Rithy",
+      "nom_de_famille": "Chhay",
+      "age": 29,
+      "date_de_naissance": "1996-02-08",
+      "lieu_de_naissance": "Kep, Cambodge",
+      "lieu_de_deces": "Kep, Cambodge",
+      "histoire": "Photographe amateur de paysages marins."
+    },
+    {
+      "id": 10,
+      "nom_complet": "Monika San",
+      "prenom": "Monika",
+      "nom_de_famille": "San",
+      "age": 41,
+      "date_de_naissance": "1984-05-30",
+      "lieu_de_naissance": "Sihanoukville, Cambodge",
+      "lieu_de_deces": "Sihanoukville, Cambodge",
+      "histoire": "Employée dans l’hôtellerie touristique."
+    },
+    {
+      "id": 11,
+      "nom_complet": "Borey Kim",
+      "prenom": "Borey",
+      "nom_de_famille": "Kim",
+      "age": 66,
+      "date_de_naissance": "1959-08-19",
+      "lieu_de_naissance": "Svay Rieng, Cambodge",
+      "lieu_de_deces": "Svay Rieng, Cambodge",
+      "histoire": "Ancien fonctionnaire administratif."
+    },
+    {
+      "id": 12,
+      "nom_complet": "Kosal Noun",
+      "prenom": "Kosal",
+      "nom_de_famille": "Noun",
+      "age": 22,
+      "date_de_naissance": "2003-10-11",
+      "lieu_de_naissance": "Kampot, Cambodge",
+      "lieu_de_deces": "Kampot, Cambodge",
+      "histoire": "Étudiant en économie."
+    },
+    {
+      "id": 13,
+      "nom_complet": "Sreyneang Ouk",
+      "prenom": "Sreyneang",
+      "nom_de_famille": "Ouk",
+      "age": 35,
+      "date_de_naissance": "1990-01-05",
+      "lieu_de_naissance": "Kratie, Cambodge",
+      "lieu_de_deces": "Kratie, Cambodge",
+      "histoire": "Infirmière dévouée à sa communauté."
+    },
+    {
+      "id": 14,
+      "nom_complet": "Chenda Ros",
+      "prenom": "Chenda",
+      "nom_de_famille": "Ros",
+      "age": 58,
+      "date_de_naissance": "1967-06-27",
+      "lieu_de_naissance": "Oddar Meanchey, Cambodge",
+      "lieu_de_deces": "Siem Reap, Cambodge",
+      "histoire": "Marchande connue pour sa gentillesse."
+    },
+    {
+      "id": 15,
+      "nom_complet": "Sokun Mean",
+      "prenom": "Sokun",
+      "nom_de_famille": "Mean",
+      "age": 47,
+      "date_de_naissance": "1978-09-14",
+      "lieu_de_naissance": "Banteay Meanchey, Cambodge",
+      "lieu_de_deces": "Banteay Meanchey, Cambodge",
+      "histoire": "Conducteur de taxi moto."
+    },
+    {
+      "id": 16,
+      "nom_complet": "Rasmey Voeun",
+      "prenom": "Rasmey",
+      "nom_de_famille": "Voeun",
+      "age": 25,
+      "date_de_naissance": "2000-12-09",
+      "lieu_de_naissance": "Phnom Penh, Cambodge",
+      "lieu_de_deces": "Phnom Penh, Cambodge",
+      "histoire": "Passionné de musique moderne khmère."
+    },
+    {
+      "id": 17,
+      "nom_complet": "Sambath Eam",
+      "prenom": "Sambath",
+      "nom_de_famille": "Eam",
+      "age": 73,
+      "date_de_naissance": "1952-04-01",
+      "lieu_de_naissance": "Takeo, Cambodge",
+      "lieu_de_deces": "Takeo, Cambodge",
+      "histoire": "Ancien moine bouddhiste."
+    },
+    {
+      "id": 18,
+      "nom_complet": "Pich Soun",
+      "prenom": "Pich",
+      "nom_de_famille": "Soun",
+      "age": 34,
+      "date_de_naissance": "1991-02-17",
+      "lieu_de_naissance": "Kampong Thom, Cambodge",
+      "lieu_de_deces": "Kampong Thom, Cambodge",
+      "histoire": "Artisan spécialisé dans le bois."
+    },
+    {
+      "id": 19,
+      "nom_complet": "Sothea Men",
+      "prenom": "Sothea",
+      "nom_de_famille": "Men",
+      "age": 49,
+      "date_de_naissance": "1976-11-28",
+      "lieu_de_naissance": "Koh Kong, Cambodge",
+      "lieu_de_deces": "Koh Kong, Cambodge",
+      "histoire": "Pêcheur expérimenté."
+    },
+    {
+      "id": 20,
+      "nom_complet": "Nary Pol",
+      "prenom": "Nary",
+      "nom_de_famille": "Pol",
+      "age": 61,
+      "date_de_naissance": "1964-03-22",
+      "lieu_de_naissance": "Phnom Penh, Cambodge",
+      "lieu_de_deces": "Phnom Penh, Cambodge",
+      "histoire": "Ancienne couturière."
     }
   ]
 }
