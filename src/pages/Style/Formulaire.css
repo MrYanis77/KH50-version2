@@ -1,24 +1,27 @@
+/* --- Mise en page globale --- */
 .form-page-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Permet de scroller si le contenu dépasse */
   min-height: 100vh;
-  background-color: #f4f4f4; /* Fond clair pour détacher le formulaire */
-  padding: 20px;
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .double-form-container {
   background: white;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  max-width: 900px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
   width: 100%;
 }
 
+/* --- Structure en colonnes --- */
 .form-columns {
   display: flex;
-  gap: 40px; /* Espace entre les deux formulaires */
+  gap: 40px;
 }
 
 .form-section {
@@ -33,51 +36,151 @@
   color: #333;
   border-bottom: 2px solid #007bff;
   padding-bottom: 5px;
+  font-size: 1.2rem;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+/* --- Champs de saisie --- */
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
 }
 
-.row {
-  display: flex;
-  gap: 10px;
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
-.input-group label {
-  font-weight: bold;
+label {
+  font-weight: 600;
   font-size: 0.9rem;
+  margin-bottom: -10px;
+  color: #555;
 }
 
-.input-group input, 
-.input-group textarea {
-  padding: 8px;
+/* --- Zone de gestion des médias --- */
+.media-upload-section {
+  margin-top: 10px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Élément de média individuel */
+.media-item {
+  position: relative;
+  width: 80px;
+  height: 80px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
+  background: #fff;
 }
 
+.media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.file-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 28px;
+  color: #888;
+}
+
+/* Bouton supprimer (-) */
+.remove-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4d4d;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.remove-btn:hover {
+  transform: scale(1.1);
+  background: #cc0000;
+}
+
+/* Bouton d'ajout (+) */
+.add-media-btn {
+  width: 80px;
+  height: 80px;
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #007bff;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.2s;
+}
+
+.add-media-btn:hover {
+  background: #e7f3ff;
+  border-color: #0056b3;
+  color: #0056b3;
+}
+
+/* --- Bouton d'envoi --- */
 .submit-btn {
   width: 100%;
-  margin-top: 25px;
-  padding: 12px;
+  margin-top: 30px;
+  padding: 15px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   background-color: #0056b3;
 }
 
-/* Responsivité pour mobile */
-@media (max-width: 768px) {
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* --- Responsivité --- */
+@media (max-width: 850px) {
   .form-columns {
     flex-direction: column;
+    gap: 20px;
+  }
+  
+  .double-form-container {
+    padding: 20px;
   }
 }

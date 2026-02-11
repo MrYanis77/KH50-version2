@@ -12,8 +12,8 @@ export default function Temoignage() {
     victimeLieuNaissance: "", victimeLieuVie: "", histoire: "",
   });
 
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [previewUrl, setPreviewUrl] = useState(null);
+  // État pour gérer plusieurs fichiers : [{ file: File, preview: string }]
+  const [mediaList, setMediaList] = useState([]);
 
   useEffect(() => {
     if (success) {
@@ -23,8 +23,7 @@ export default function Temoignage() {
         victimeNom: "", victimePrenom: "", victimeDateNaissance: "",
         victimeLieuNaissance: "", victimeLieuVie: "", histoire: ""
       });
-      setSelectedFile(null);
-      setPreviewUrl(null);
+      setMediaList([]);
       dispatch(resetStatus());
     }
     if (error) {
@@ -37,24 +36,35 @@ export default function Temoignage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFileChange = (e) => {
+  // Ajouter un nouveau média
+  const handleAddMedia = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setSelectedFile(file); // On garde le fichier brut
-      if (file.type.startsWith("image/")) {
-        setPreviewUrl(URL.createObjectURL(file));
-      } else {
-        setPreviewUrl(null);
-      }
+      const newMedia = {
+        file: file,
+        preview: file.type.startsWith("image/") ? URL.createObjectURL(file) : null
+      };
+      setMediaList([...mediaList, newMedia]);
+      e.target.value = null; // Reset l'input pour pouvoir reprendre le même fichier si besoin
     }
+  };
+
+  // Supprimer un média par index
+  const handleRemoveMedia = (index) => {
+    const newList = [...mediaList];
+    // Libérer la mémoire de l'URL d'aperçu
+    if (newList[index].preview) URL.revokeObjectURL(newList[index].preview);
+    newList.splice(index, 1);
+    setMediaList(newList);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Fichier prêt à être envoyé :", selectedFile); // Doit afficher un objet 'File'
-    dispatch(submitTemoignage({ formData, selectedFile }));
+    // On extrait uniquement les fichiers bruts pour l'envoi
+    const filesToSend = mediaList.map(m => m.file);
+    dispatch(submitTemoignage({ formData, selectedFiles: filesToSend }));
   };
-  
+
   return (
     <div className="form-page-wrapper">
       <form className="double-form-container" onSubmit={handleSubmit}>
@@ -81,10 +91,28 @@ export default function Temoignage() {
             
             <textarea name="histoire" placeholder="Son histoire..." rows="4" value={formData.histoire} onChange={handleChange} required />
             
-            <div className="media-upload-zone">
-              <label>Document justificatif</label>
-              <input type="file" onChange={handleFileChange} accept="image/*,video/*,.pdf" />
-              {previewUrl && <img src={previewUrl} alt="Aperçu" style={{ width: '80px', marginTop: '10px', borderRadius: '4px' }} />}
+            <div className="media-upload-section">
+              <label>Documents et Médias</label>
+              
+              {/* Liste des médias ajoutés */}
+              <div className="media-grid">
+                {mediaList.map((media, index) => (
+                  <div key={index} className="media-item">
+                    {media.preview ? (
+                      <img src={media.preview} alt="Aperçu" />
+                    ) : (
+                      <div className="file-icon">📄</div>
+                    )}
+                    <button type="button" className="remove-btn" onClick={() => handleRemoveMedia(index)}>−</button>
+                  </div>
+                ))}
+                
+                {/* Bouton Plus (+) */}
+                <label className="add-media-btn">
+                  +
+                  <input type="file" onChange={handleAddMedia} accept="image/*,video/*,.pdf" hidden />
+                </label>
+              </div>
             </div>
           </div>
         </div>
