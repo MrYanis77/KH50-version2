@@ -1,0 +1,65 @@
+.profil-container {
+  padding: 50px;
+  color: white;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.error-message {
+  color: white;
+  padding: 50px;
+}
+
+.action-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.btn-back {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  color: white;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #555;
+}
+
+.profil-title {
+  color: #e0e0e0;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.civil-info {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.separator {
+  margin: 40px 0;
+  border: 0;
+  border-top: 1px solid #333;
+}
+
+.bio-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
+  font-style: italic;
+}
+
+.media-grid {
+  display: flex;
+  gap: 50px;
+}
+
+.placeholder-text {
+  color: #888;
+}

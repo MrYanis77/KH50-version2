@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://MrYanis77.github.io/KH50-version2",
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,13 +11,17 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "update-data": "node scripts/syncData.js" 
+    "update-data": "node scripts/syncData.js"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.4.2",
+    "@reduxjs/toolkit": "^2.11.2",
+    "@sentry/react": "^10.38.0",
+    "axios": "^1.13.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.10.1",
     "three": "^0.182.0"
   },

@@ -5,32 +5,29 @@ export default function Profil() {
   const { id } = useParams();
   const navigate = useNavigate();
   
-  // On cherche la personne dans les données JSON
   const personne = jsonData.people.find(p => p.id === parseInt(id));
 
-  if (!personne) return <div style={{ color: 'white', padding: '50px' }}>Personne non trouvée</div>;
+  if (!personne) {
+    return <div className="error-message">Personne non trouvée</div>;
+  }
 
   return (
-    <div style={{ padding: '50px', color: 'white', background: '#1a1a1a', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
+    <div className="profil-container">
       
       {/* Barre d'actions */}
-      <div style={{ display: 'flex', gap: '10px', marginBottom: '30px' }}>
-        <button 
-          onClick={() => navigate(-1)}
-          style={{ padding: '10px 20px', cursor: 'pointer', borderRadius: '5px', border: 'none', background: '#444', color: 'white' }}
-        >
+      <div className="action-bar">
+        <button className="btn-back" onClick={() => navigate(-1)}>
           ← Retour au mur
         </button>
-
       </div>
 
-      <h1 style={{ color: '#e0e0e0', borderBottom: '1px solid #444', paddingBottom: '10px' }}>
+      <h1 className="profil-title">
         {personne.prenom} {personne.nom_de_famille}
       </h1>
 
       <section>
         <h2>État Civil :</h2>
-        <div style={{ lineHeight: '1.8', fontSize: '1.1rem' }}>
+        <div className="civil-info">
           <p><strong>Prénom :</strong> {personne.prenom}</p>
           <p><strong>Nom de famille :</strong> {personne.nom_de_famille}</p>
           <p><strong>Âge :</strong> {personne.age} ans</p>
@@ -39,27 +36,27 @@ export default function Profil() {
         </div>
       </section>
 
-      <hr style={{ margin: '40px 0', borderColor: '#333' }} />
+      <hr className="separator" />
 
       <section>
         <h2>Biographie</h2>
-        <p style={{ fontSize: '1.2rem', lineHeight: '1.6', color: '#ccc', fontStyle: 'italic' }}>
+        <p className="bio-text">
           {personne.histoire}
         </p>
       </section>
 
-      <hr style={{ margin: '40px 0', borderColor: '#333' }} />
+      <hr className="separator" />
 
       <section>
         <h2>Média</h2>
-        <div style={{ display: 'flex', gap: '50px' }}>
+        <div className="media-grid">
           <div>
             <h3>Vidéo</h3>
-            <p style={{ color: '#888' }}>En cours...</p>
+            <p className="placeholder-text">En cours...</p>
           </div>
           <div>
             <h3>Documents</h3>
-            <p style={{ color: '#888' }}>En cours...</p>
+            <p className="placeholder-text">En cours...</p>
           </div>
         </div>
       </section>

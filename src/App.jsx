@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './component/Navbar';
 import Accueil from './pages/Accueil';
-import Temoignage from './pages/temoignage';
+import Temoignage from './pages/Temoignage';
 import Mur from './pages/Mur';
 import Profil from './pages/Profil';
 
