@@ -1,9 +1,0 @@
-.mur-container {
-  width: 100vw;
-  height: 100vh;
-  background-color: black; /* Couleur de secours si l'image ne charge pas */
-  background-image: url("src/assets/FondStupa.png");
-  background-size: cover;    /* L'image couvre tout l'écran sans se déformer */
-  background-position: center; /* L'image est centrée */
-  background-repeat: no-repeat; /* Évite que l'image ne se répète */
-}

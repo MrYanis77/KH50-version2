@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  /* Couleurs principales (Gauche) */
+  --color-ocre-chaud: #CA5516;
+  --color-ambre: #F29100;
+  --color-pierre-bleue: #96A498;
+  --color-ardoise-foncee: #434F43;
+
+  /* Couleurs secondaires (Droite) */
+  --color-terre-ombre: #802A00;
+  --color-sable: #E5C595;
+  --color-mousse-seche: #5C685B;
+}

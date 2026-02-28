@@ -5,12 +5,7 @@ import * as Sentry from "@sentry/react";
 import { Provider } from 'react-redux';
 import { store } from './data/store'; // On va le créer
 import App from './App';
-import './pages/Style/index.css';
-import './pages/Style/Navbar.css';
-import './pages/Style/Accueil.css';
-import './pages/Style/Formulaire.css';
-import './pages/Style/Profil.css';
-import './pages/Style/Mur.css';
+import './index.css';
 
 Sentry.init({
   dsn: "https://4ddf9ea81f50dd43c8a2a0eeddd3451d@o4510835089997824.ingest.de.sentry.io/4510835096813648", // À récupérer sur sentry.io
